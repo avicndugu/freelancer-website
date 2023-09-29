@@ -7,6 +7,7 @@ Renders a menu for the given menu ID.
 @example: {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
 */}}
 
+
 {{- $page := .page }}
 {{- $menuID := .menuID }}
 
@@ -14,7 +15,8 @@ Renders a menu for the given menu ID.
 <nav id="nav">
     <ul>
       {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
-        <li>
+
+        <!-- <li>
             <a href="#">Dropdown</a>
             <ul>
                 <li><a href="#">Lorem ipsum dolor</a></li>
@@ -34,21 +36,30 @@ Renders a menu for the given menu ID.
         </li>
         <li><a href="left-sidebar.html">Left Sidebar</a></li>
         <li class="break"><a href="right-sidebar.html">Right Sidebar</a></li>
-        <li><a href="no-sidebar.html">No Sidebar</a></li>
+        <li><a href="no-sidebar.html">No Sidebar</a></li> -->
     </ul>
 </nav>
 {{- end }}
 
 {{- define "partials/inline/menu/walk.html" }}
   {{- $page := .page }}
-  {{- range .menuEntries }}
+  {{- $thirditem := index .menuEntries 2 }}
+  {{- range index .menuEntries }}
     {{- $attrs := dict "href" .URL }}
     {{- if $page.IsMenuCurrent .Menu . }}
       {{- $attrs = merge $attrs (dict "class" "active" "aria-current" "page") }}
     {{- else if $page.HasMenuCurrent .Menu .}}
       {{- $attrs = merge $attrs (dict "class" "ancestor" "aria-current" "true") }}
     {{- end }}
-    <li>
+    {{- $attrsli := dict "class" .Name }}
+    {{- if eq $thirditem.Name .Name }}
+      {{- $attrsli = merge $attrsli (dict "class" "break") }}
+    {{- end }}
+    <li {{- range $k, $v := $attrsli }}
+          {{- with $v }}
+            {{- printf " %s=%q" $k $v | safeHTMLAttr }}
+          {{- end }}
+        {{- end -}} >
       <a
         {{- range $k, $v := $attrs }}
           {{- with $v }}

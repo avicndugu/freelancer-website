@@ -3,19 +3,72 @@ languageCode = 'en-us'
 title = 'My New Hugo Site'
 
 [[menus.main]]
-name = 'Home'
+name = 'Dropdown'
 pageRef = '/'
 weight = 10
 
 [[menus.main]]
-name = 'Posts'
-pageRef = '/posts'
+name = 'Left Sidebar'
+pageRef = '/left-sidebar/'
 weight = 20
 
 [[menus.main]]
-name = 'Tags'
-pageRef = '/tags'
+name = 'Right Sidebar'
+pageRef = '/right-sidebar/'
 weight = 30
+
+[[menus.main]]
+name = 'No Sidebar'
+pageRef = '/no-sidebar/'
+weight = 40
+
+[[menus.main]]
+name = 'Lorem ipsum dolor'
+pageRef = '/'
+weight = 10
+parent='Dropdown'
+
+[[menus.main]]
+name = 'Magna phasellus'
+pageRef = '/'
+weight = 20
+parent='Dropdown'
+
+[[menus.main]]
+name = 'Etiam dolore nisl'
+pageRef = '/'
+weight = 30
+parent='Dropdown'
+
+[[menus.main]]
+name = 'Phasellus consequat'
+pageRef = '/'
+weight = 40
+parent='Dropdown'
+
+[[menus.main]]
+name = 'Lorem ipsum'
+pageRef = '/'
+weight = 10
+parent='Phasellus consequat'
+
+[[menus.main]]
+name = 'Phasellus'
+pageRef = '/'
+weight = 10
+parent='Phasellus consequat'
+
+[[menus.main]]
+name = 'Magna'
+pageRef = '/'
+weight = 10
+parent='Phasellus consequat'
+
+[[menus.main]]
+name = 'Etium'
+pageRef = '/'
+weight = 10
+parent='Phasellus consequat'
 
 [module]
   [module.hugoVersion]

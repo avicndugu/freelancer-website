@@ -55,17 +55,19 @@ Renders a menu for the given menu ID.
     {{- if eq $thirditem.Name .Name }}
       {{- $attrsli = merge $attrsli (dict "class" "break") }}
     {{- end }}
-    <li {{- range $k, $v := $attrsli }}
+    <li
+        {{- range $k, $v := $attrsli }}
           {{- with $v }}
             {{- printf " %s=%q" $k $v | safeHTMLAttr }}
           {{- end }}
-        {{- end -}} >
+        {{- end -}}
+    >
       <a
         {{- range $k, $v := $attrs }}
           {{- with $v }}
             {{- printf " %s=%q" $k $v | safeHTMLAttr }}
           {{- end }}
-        {{- end -}}
+        {{- end }}
       >{{ or (T .Identifier) .Name | safeHTML }}</a>
       {{- with .Children }}
         <ul>

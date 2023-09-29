@@ -4,69 +4,78 @@ title = 'My New Hugo Site'
 
 [[menus.main]]
 name = 'Dropdown'
-pageRef = '/'
 weight = 10
 
 [[menus.main]]
 name = 'Left Sidebar'
-pageRef = '/left-sidebar/'
+pageRef = 'left-sidebar'
+url = '/left-sidebar/'
 weight = 20
 
 [[menus.main]]
 name = 'Right Sidebar'
-pageRef = '/right-sidebar/'
+pageRef = 'right-sidebar'
+url = '/right-sidebar/'
 weight = 30
 
 [[menus.main]]
 name = 'No Sidebar'
-pageRef = '/no-sidebar/'
+pageRef = 'no-sidebar'
+url = '/no-sidebar/'
 weight = 40
 
 [[menus.main]]
 name = 'Lorem ipsum dolor'
-pageRef = '/'
+pageRef = '/a/'
 weight = 10
 parent='Dropdown'
 
 [[menus.main]]
 name = 'Magna phasellus'
-pageRef = '/'
+pageRef = 'b'
+url = '/b/'
 weight = 20
 parent='Dropdown'
 
 [[menus.main]]
 name = 'Etiam dolore nisl'
-pageRef = '/'
+pageRef = 'c'
+url = '/c/'
 weight = 30
 parent='Dropdown'
 
 [[menus.main]]
 name = 'Phasellus consequat'
-pageRef = '/'
+pageRef = 'd'
+url = '/d/'
 weight = 40
 parent='Dropdown'
 
 [[menus.main]]
 name = 'Lorem ipsum'
-pageRef = '/'
+pageRef = 'e'
+url = '/e/'
 weight = 10
 parent='Phasellus consequat'
 
 [[menus.main]]
 name = 'Phasellus'
-pageRef = '/'
+pageRef = 'f'
+url = '/f/'
 weight = 10
 parent='Phasellus consequat'
 
 [[menus.main]]
 name = 'Magna'
-pageRef = '/'
+pageRef = 'g'
+url = '/g/'
 weight = 10
 parent='Phasellus consequat'
 
 [[menus.main]]
 name = 'Etium'
-pageRef = '/'
+pageRef = 'h'
+url = '/h/'
 weight = 10
 parent='Phasellus consequat'
 

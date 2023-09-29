@@ -1,0 +1,5 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'Timer Agency Template'
+
+theme = "freelancer-msasa"

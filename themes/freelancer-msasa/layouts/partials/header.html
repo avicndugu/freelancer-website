@@ -1,12 +1,8 @@
 <!-- Header -->
-                <div id="header-wrapper">
-                    <div id="header" class="container">
+<div id="header" class="container">
+    <!-- Logo -->
+    <h1 id="logo"><a href="index.html">{{ site.Title }}</a></h1>
+    <!-- Nav -->
+    {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+</div>
 
-                        <!-- Logo -->
-                            <h1 id="logo"><a href="index.html">{{ site.Title }}</a></h1>
-
-                        <!-- Nav -->
-
-                    </div>
-
-{{ partial "menu.html" (dict "menuID" "main" "page" .) }}

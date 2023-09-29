@@ -9,3 +9,7 @@
     {{- end }}
   {{- end }}
 {{- end }}
+
+{{- with resources.Get "css/fontawesome-all.min.css" }}
+    <link rel="stylesheet" href="{{ .RelPermalink }}">
+{{- end }}

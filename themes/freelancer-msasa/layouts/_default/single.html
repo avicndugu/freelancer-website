@@ -1,10 +1,98 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
+<!-- Main -->
+<div class="wrapper">
+    <div class="container" id="main">
+        {{ if eq .Layout "rightsidebar" }}
+            <div class="row gtr-150">
+                <div class="col-8 col-12-narrower">
+                    <!-- Content -->
+                    <article id="content">
+                        <header>
+                            <h2>{{ .Title }}</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur et sed adipiscing elit
+                            dolor neque semper magna lorem ipsum.</p>
+                        </header>
+                        {{ .Content }}
+                    </article>
+                </div>
+                <div class="col-4 col-12-narrower">
+                    <!-- Sidebar -->
+                    {{ partial "sidebar.html" . }}
+                </div>
+            </div>
+        {{ else if eq .Layout "leftsidebar" }}
+            <div class="row gtr-150">
+                <div class="col-4 col-12-narrower">
+                    <!-- Sidebar -->
+                    {{ partial "sidebar.html" . }}
+                </div>
+                <div class="col-8 col-12-narrower imp-narrower">
+                    <!-- Content -->
+                    <article id="content">
+                        <header>
+                            <h2>{{ .Title }}</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur et sed adipiscing elit
+                            dolor neque semper magna lorem ipsum.</p>
+                        </header>
+                        {{ .Content }}
+                    </article>
+                </div>
+            </div>
+        {{ else }}
+            <!-- Content -->
+            <article id="content">
+                <header>
+                        <h2>{{ .Title }}</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur et sed adipiscing elit
+                    dolor neque semper.</p>
+                </header>
+                {{ .Content }}
+                {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+            </article>
+        {{ end }}
 
-  {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
-  {{ $dateHuman := .Date | time.Format ":date_long" }}
-  <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
 
-  {{ .Content }}
-  {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+        <div class="row features">
+            <section class="col-4 col-12-narrower feature">
+                <div class="image-wrapper first">
+                    <a href="#" class="image featured"><img src="/images/pic03.jpg" alt="" /></a>
+                </div>
+                <header>
+                    <h3>Dolor sit consequat magna</h3>
+                </header>
+                <p>Lorem ipsum dolor sit amet consectetur et sed adipiscing elit. Curabitur
+                vel sem sit dolor neque semper magna lorem ipsum.</p>
+                <ul class="actions">
+                    <li><a href="#" class="button">Elevate my awareness</a></li>
+                </ul>
+            </section>
+            <section class="col-4 col-12-narrower feature">
+                <div class="image-wrapper">
+                    <a href="#" class="image featured"><img src="/images/pic04.jpg" alt="" /></a>
+                </div>
+                <header>
+                    <h3>Dolor sit consequat magna</h3>
+                </header>
+                <p>Lorem ipsum dolor sit amet consectetur et sed adipiscing elit. Curabitur
+                vel sem sit dolor neque semper magna lorem ipsum.</p>
+                <ul class="actions">
+                    <li><a href="#" class="button">Elevate my awareness</a></li>
+                </ul>
+            </section>
+            <section class="col-4 col-12-narrower feature">
+                <div class="image-wrapper">
+                    <a href="#" class="image featured"><img src="/images/pic05.jpg" alt="" /></a>
+                </div>
+                <header>
+                    <h3>Dolor sit consequat magna</h3>
+                </header>
+                <p>Lorem ipsum dolor sit amet consectetur et sed adipiscing elit. Curabitur
+                vel sem sit dolor neque semper magna lorem ipsum.</p>
+                <ul class="actions">
+                    <li><a href="#" class="button">Elevate my awareness</a></li>
+                </ul>
+            </section>
+        </div>
+    </div>
+</div>
 {{ end }}

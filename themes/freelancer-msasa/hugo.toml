@@ -2,6 +2,8 @@ baseURL = 'https://example.org/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
 
+[params]
+
 [[menus.main]]
 name = 'Dropdown'
 weight = 10
@@ -27,57 +29,58 @@ weight = 40
 [[menus.main]]
 name = 'Lorem ipsum dolor'
 pageRef = '/a/'
+url = '/posts/post-1/'
 weight = 10
 parent='Dropdown'
 
 [[menus.main]]
 name = 'Magna phasellus'
 pageRef = 'b'
-url = '/b/'
+url = '/posts/post-2/'
 weight = 20
 parent='Dropdown'
 
 [[menus.main]]
 name = 'Etiam dolore nisl'
 pageRef = 'c'
-url = '/c/'
+url = '/posts/post-1/'
 weight = 30
 parent='Dropdown'
 
 [[menus.main]]
 name = 'Phasellus consequat'
 pageRef = 'd'
-url = '/d/'
 weight = 40
 parent='Dropdown'
 
 [[menus.main]]
 name = 'Lorem ipsum'
 pageRef = 'e'
-url = '/e/'
+url = '//posts/post-1/'
 weight = 10
 parent='Phasellus consequat'
 
 [[menus.main]]
 name = 'Phasellus'
 pageRef = 'f'
-url = '/f/'
+url = '/posts/post-2/'
 weight = 10
 parent='Phasellus consequat'
 
 [[menus.main]]
 name = 'Magna'
 pageRef = 'g'
-url = '/g/'
+url = '/posts/post-1/'
 weight = 10
 parent='Phasellus consequat'
 
 [[menus.main]]
 name = 'Etium'
 pageRef = 'h'
-url = '/h/'
+url = '/posts/post-2/'
 weight = 10
 parent='Phasellus consequat'
+
 
 [module]
   [module.hugoVersion]

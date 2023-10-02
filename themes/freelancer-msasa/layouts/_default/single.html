@@ -2,7 +2,7 @@
 <!-- Main -->
 <div class="wrapper">
     <div class="container" id="main">
-        {{ if eq .Layout "rightsidebar" }}
+        {{ if or (eq .Params.Sidebar "right") }}
             <div class="row gtr-150">
                 <div class="col-8 col-12-narrower">
                     <!-- Content -->
@@ -20,7 +20,7 @@
                     {{ partial "sidebar.html" . }}
                 </div>
             </div>
-        {{ else if eq .Layout "leftsidebar" }}
+        {{ else if or (eq .Params.Sidebar "left") }}
             <div class="row gtr-150">
                 <div class="col-4 col-12-narrower">
                     <!-- Sidebar -->

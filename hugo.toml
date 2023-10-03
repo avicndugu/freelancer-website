@@ -3,3 +3,81 @@ languageCode = 'en-us'
 title = 'Telephasic'
 
 theme = "freelancer-msasa"
+
+
+[[menus.main]]
+name = 'Dropdown'
+weight = 10
+
+[[menus.main]]
+name = 'Left Sidebar'
+pageRef = 'left-sidebar'
+url = '/left-sidebar/'
+weight = 20
+
+[[menus.main]]
+name = 'Right Sidebar'
+pageRef = 'right-sidebar'
+url = '/right-sidebar/'
+weight = 30
+
+[[menus.main]]
+name = 'No Sidebar'
+pageRef = 'no-sidebar'
+url = '/no-sidebar/'
+weight = 40
+
+[[menus.main]]
+name = 'Lorem ipsum dolor'
+pageRef = '/a/'
+url = '/posts/post-1/'
+weight = 10
+parent='Dropdown'
+
+[[menus.main]]
+name = 'Magna phasellus'
+pageRef = 'b'
+url = '/posts/post-2/'
+weight = 20
+parent='Dropdown'
+
+[[menus.main]]
+name = 'Etiam dolore nisl'
+pageRef = 'c'
+url = '/posts/post-1/'
+weight = 30
+parent='Dropdown'
+
+[[menus.main]]
+name = 'Phasellus consequat'
+pageRef = 'd'
+weight = 40
+parent='Dropdown'
+
+[[menus.main]]
+name = 'Lorem ipsum'
+pageRef = 'e'
+url = '//posts/post-1/'
+weight = 10
+parent='Phasellus consequat'
+
+[[menus.main]]
+name = 'Phasellus'
+pageRef = 'f'
+url = '/posts/post-2/'
+weight = 10
+parent='Phasellus consequat'
+
+[[menus.main]]
+name = 'Magna'
+pageRef = 'g'
+url = '/posts/post-1/'
+weight = 10
+parent='Phasellus consequat'
+
+[[menus.main]]
+name = 'Etium'
+pageRef = 'h'
+url = '/posts/post-2/'
+weight = 10
+parent='Phasellus consequat'

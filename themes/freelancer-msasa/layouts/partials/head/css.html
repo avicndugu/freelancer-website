@@ -1,5 +1,5 @@
 <!-- template main css file -->
-{{ $options := dict "transpiler" "dartsass" "targetPath" "css/main.css" }}
+{{ $options := dict "transpiler" "libsass" "targetPath" "css/main.css" }}
 {{- with resources.Get "css/sass/main.scss" | toCSS $options }}
   {{- if eq hugo.Environment "development" }}
     <link rel="stylesheet" href="{{ .RelPermalink }}">

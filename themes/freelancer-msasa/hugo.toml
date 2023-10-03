@@ -1,5 +1,6 @@
 baseURL = 'https://example.org/'
 languageCode = 'en-us'
+lang: 'en'
 title = 'My New Hugo Site'
 
 [params]

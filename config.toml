@@ -1,5 +1,6 @@
 baseURL = ''
 languageCode = 'en-us'
+lang = 'en'
 title = 'Telephasic'
 
 theme = "freelancer-msasa"

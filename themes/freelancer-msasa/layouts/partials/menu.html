@@ -14,7 +14,7 @@ Renders a menu for the given menu ID.
 {{- with index site.Menus $menuID }}
 <nav id="nav">
     <ul>
-      {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
+      {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" . ) }}
 
         <!-- <li>
             <a href="#">Dropdown</a>

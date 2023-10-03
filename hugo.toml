@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://freelancer-website-hugo.netlify.app/'
 languageCode = 'en-us'
 title = 'Telephasic'
 
